@@ -1,16 +1,16 @@
 <?php
-$directorio="mis_apuntes";
+// $directorio="mis_apuntes";
 function eliminar($directorio){
-    foreach (glob($directorio."/*.*") as $value) {
+    foreach (glob($directorio."/*") as $value) {
         if (is_dir($value)) {
-            echo $value;
+            // echo $value;
             eliminar($value);
         }else {
-            echo $value;
+            // echo $value;
             unlink($value);
         }
     }
     rmdir($directorio);
 }
-eliminar($directorio);
+eliminar("mis_apuntes");
 ?>
