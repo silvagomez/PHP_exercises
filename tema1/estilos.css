@@ -1,0 +1,78 @@
+	header, nav, footer, article, section {display:block;}
+
+//*PARTE MENU*//
+
+header  { font-family: Garamond;
+					text-align: center;
+					font-size: x-large;
+					background-image: url("../imagenes/mar.jpg");
+				}
+h1      { text-align:center;
+					background-color: yellow;
+					border: thin blue solid;
+				}
+
+					ul{
+						display: flex;
+						flex-wrap: wrap;
+						justify-content: center;
+						list-style-type: none;
+						overflow: hidden;
+					}
+					li {
+						float: left;
+						background-color: yellow;
+						border: 3px gray solid;
+						padding: 8px 14px;
+						margin: 0px 10px;
+					}
+					li a {
+						display: block;
+						color: blue;
+						text-align: center;
+					}
+//*FIN MENU*//
+
+	article { border: thin green groove;}
+	article.tecnologia
+		{ background-color: lightsalmon;
+		  border: thick dashed darkblue; }
+	article.fondo
+		{  background-image: url("../imagenes/mar.jpg"); }
+
+
+	div.cuadro
+	        { border: thick yellow solid;}
+	footer  { clear:both;}
+
+
+	nav.lateral
+		{ float:right;
+		  width:20%;
+	    border: thin blue dotted;}
+
+
+	section.col1
+	        { float:left;
+	          width:30%;
+	          border: thin red solid;}
+
+        section.col2
+                { float:left;
+                  width:25%;
+                  border: thin yellow solid;}
+	section.col3
+	        { float:left;
+	          width:24%;
+	          border: thin yellow solid;}
+	section.arriba
+	        { float:left;
+	          width:79%;
+	          border: thick red solid;}
+
+	#menu   { border:thick grey solid;
+	          background-color: yellow;
+	          display:inline; margin: 8px;}
+	img { margin-left:2em;}
+
+}
