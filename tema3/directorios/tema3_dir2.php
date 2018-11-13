@@ -12,4 +12,5 @@ function eliminar($directorio){
     }
     rmdir($directorio);
 }
+eliminar($directorio);
 ?>
