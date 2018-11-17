@@ -99,3 +99,4 @@ abc;
     echo strstr($cadena,"averiguar");
 
 ?>
+
