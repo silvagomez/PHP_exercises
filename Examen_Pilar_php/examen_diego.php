@@ -73,7 +73,7 @@ xxx;
                 // echo $n;
                 $cadena = array('1' => 'T', '2' => 'R', '3' => 'W','4' => 'A','5' => 'G', '6' => 'M', '7' => 'Y','8' => 'F','9' => 'P', '10' => 'D', '11' => 'X','12' => 'B','13' => 'N', '14' => 'J', '15' => 'Z','16' => 'S','17' => 'Q', '18' => 'V', '19' => 'H','20' => 'L','21' => 'C', '22' => 'V', '23' => 'E');
                 foreach ($cadena as $indece => $valor) {
-                    $numo=$indece;
+                    $numo=$indece-1;
                     if ($n==$numo) {
                         // echo $numo;
                         $letrareal=$valor;

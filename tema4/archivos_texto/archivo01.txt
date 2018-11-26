@@ -1,0 +1,4 @@
+Este es un fichero de texto (ENTER)
+La función feof() nos permite verificar (ENTER)
+si el apuntador de un archivo cumple la (ENTER)
+condición EOF(fin de archivo)
