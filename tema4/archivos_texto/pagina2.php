@@ -1,5 +1,5 @@
 <?php
-$archivo=fopen("datos.txt","a") or die("Problemas en la creacion"); // "a" es para escribir
+$archivo=fopen("datos01.txt","a") or die("Problemas en la creacion"); // "a" es para escribir
 fwrite($archivo,$_POST['nombre']); // se guarda en archivo el nombre del formulario
 fwrite($archivo, "<br/>");
 fwrite($archivo,$_POST['telefono']); // se guarda en archivo el teléfono del formulario

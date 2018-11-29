@@ -1,0 +1,15 @@
+01|123456789012345678|123|123
+02|diego camilo silva|001|50 
+03|diego camilo gomez|121|30 
+04|camilo silva gomez|112|21 
+05|diego silva gomez |113|8  
+06|carlos andres silv|315|10 
+07|carlos andres gome|315|75 
+08|andres silva gomez|896|555
+09|carlos silva gomez|586|00 
+10|pedro ramon silva |398|9  
+11|pedro ramon pinzon|751|65 
+12|ramon silva pinzon|315|77 
+13|pedro silva pinzon|235|88 
+14|alicia gomez suare|854|11 
+15|aragorn silva gome|246|12 

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Pizza</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body{
+            margin: 0 auto;;
+            width: 70%;
+            font-family: sans-serif;
+            direction: ltr;
+            line-height: 1.5;
+            
+            text-align: justify;
+        }
+        main{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin: 40px;
+            }
+    </style>
+</head>
+
+<body>
+    <main>
+        <form action="tema4_pizza2.php" method="POST">
+            <label>Nombre <input type="text" name="nombre"></label>
+            <label>Dirección <input type="text" name="direccion"></label>
+            <br><br>
+            <label>Jamón & Queso <input type="checkbox" name="j&q"></label>
+            <br>
+            <label>Cantidad <input type="number" name="cant_j&q"></label>
+            <br><br>
+            <label>Napolitana <input type="checkbox" name="napo"></label>
+            <br>
+            <label>Cantidad <input type="number" name="cant_napo"></label>
+            <br><br>
+            <label>Hawaiana <input type="checkbox" name="hawa"></label>
+            <br>
+            <label>Cantidad <input type="number" name="cant_hawa"></label>
+            <br><br><br>
+            <input type="submit" value="Hacer pedido">
+        </form>
+    </main>
+</body>
+
+</html>
