@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0 auto;;
+            width: 70%;
+            font-family: sans-serif;
+            direction: ltr;
+            line-height: 1.5;
+            
+            text-align: justify;
+        }
+        main{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin: 40px;
+            }
+    </style>
+</head>
+<body>
+    <main>
+        <h2>VENTA</h2>
+        <form action="venta.php" method="post">
+            <label>Código cliente <input type="number" name="codigo_c" required></label>
+            <br>
+            <label>Código artículo <input type="number" name="codigo_a" required></label>
+            <br>
+            <label>Descripción <br> <textarea name="descripcion" cols="30" rows="10" required></textarea></label>
+            <br>
+            <label>Precio <input type="number" name="precio" step="any" required></label>
+            <br>
+            <label>Cantidad <input type="number" name="cantidad" required></label>
+            <br>
+            <input type="submit" value="Agregar">
+        </form>
+    </main>
+</body>
+</html>

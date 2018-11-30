@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0 auto;;
+            width: 70%;
+            font-family: sans-serif;
+            direction: ltr;
+            line-height: 1.5;
+            
+            text-align: justify;
+        }
+        main{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin: 40px;
+            }
+    </style>
+</head>
+<body>
+    <main>
+        <h2>CLIENTE</h2>
+        <form action="cliente.php" method="post">
+            <label>Código cliente <input type="number" name="codigo" required></label>
+            <br>
+            <label>Nombre cliente <input type="text" name="nombre" required></label>
+            <br>
+            <label>Dirección cliente <input type="text" name="direccion" required></label>
+            <br>
+            <input type="submit" value="Agregar">
+        </form>
+    </main>
+</body>
+</html>
