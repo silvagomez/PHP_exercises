@@ -17,7 +17,7 @@ fwrite($archivo, PHP_EOL);
 fclose($archivo);
 echo <<<abc
     <h3>Venta guardada satisfactoriamente</h3>
-    <a href="cliente.html"><input type="button" value="Volver"></a>
+    <a href="venta.html"><input type="button" value="Volver"></a>
 abc;
 require_once '../../../estilo/formato_f.php';
 ?>
