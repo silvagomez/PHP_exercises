@@ -3,7 +3,7 @@
 $archivo=fopen('vacio01.txt','r') or die('ERROR: Revisar código');
 $contador_lineas=0;
 $linea=fgets($archivo); // guardamos info hasta el salto de linea
-while (!feof($linea)) { // mientras no exista linea
+while(!feof($linea)) { // mientras no exista linea
     utf8_encode($linea);
     $campo_[$contador_lineas]=explode("|",$linea);
     echo <<<abc
