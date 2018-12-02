@@ -6,10 +6,10 @@ $contador_lineas=0;
 while (!feof($archivo)) { // mientras no exista final de fichero -> función feof()
     $linea=fgets($archivo); // guardamos info hasta el salto de linea
     utf8_encode($linea);
-    $campo_[$contador_lineas]=explode("|",$linea);
+    $campo[$contador_lineas]=explode("|",$linea);
     echo <<<abc
         <div>
-            Info: {$campo_[$contador_lineas][0]}
+            Info: {$campo[$contador_lineas][0]}
         </div>
 abc;
     $contador_lineas++;
