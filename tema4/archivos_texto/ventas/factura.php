@@ -17,8 +17,8 @@ while ((!feof($archivo_venta)) && (!feof($archivo_cliente))) { // pregunta sí n
     while ((substr($linea_venta,0,3))!=(substr($linea_cliente,0,3))) { // pregunto por los tres primero carácteres
         $linea_cliente=fgets($archivo_cliente);
     }
-    // echo substr($linea_venta,0,3)."<br>";
-    // echo substr($linea_cliente,0,3)."<br>";
+    // echo substr($linea_venta,0,3)."<br>"; // para comprobar en que código iba el programa
+    // echo substr($linea_cliente,0,3)."<br>"; // para comprobar en que código iba el programa
     $campo_cliente["cliente".$contador_cliente]=explode("|",$linea_cliente); // hago un explode para que esa linea_cliente se vuelva un array y se alamcene dentro del array campo_cliente ->OJO ES BIDIMENSIONAL
     //--//
     //Imprimo la info necesaria del array bidimesional campo_cliente
