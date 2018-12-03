@@ -40,7 +40,7 @@ abc;
         $contador_venta++; 
     }
     echo <<<abc
-    <b>Total: $total</b><br><br>
+    <b>Total factura: $total</b><br><br>
 abc;
     $total=0;
     $contador_cliente++;
