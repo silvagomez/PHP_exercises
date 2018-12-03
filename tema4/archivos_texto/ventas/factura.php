@@ -22,6 +22,7 @@ while (!feof($archivo_venta)) {
     while ($campo_venta["venta".$contador_venta][0] != $campo_cliente["cliente".$contador_cliente][0]) {
         $linea_c=fgets($archivo_cliente);
         $contador_cliente++;
+        // $campo_cliente["cliente".$contador_cliente]=explode("|",$linea_c);
         echo "son distintos";
     }
     //--//
