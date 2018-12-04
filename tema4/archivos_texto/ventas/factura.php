@@ -35,12 +35,12 @@ abc;
         {$campo_venta["venta".$contador_venta][1]}-----{$campo_venta["venta".$contador_venta][2]}-----{$campo_venta["venta".$contador_venta][4]}-----{$campo_venta["venta".$contador_venta][3]}
         <br>
 abc;
-        $total+=$campo_venta["venta".$contador_venta][3]; // voy sumando los precios
+        $total+=($campo_venta["venta".$contador_venta][3]*$campo_venta["venta".$contador_venta][4]); // voy sumando los precios que los multiplica por la cantidad
         $linea_venta=fgets($archivo_venta);
         $contador_venta++; 
     }
     echo <<<abc
-    <b>Total factura: $total</b><br><br>
+    <b>Total factura: $total €</b><br><br>
 abc;
     $total=0;
     $contador_cliente++;

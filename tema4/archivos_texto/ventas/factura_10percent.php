@@ -11,6 +11,7 @@ while (!feof($archivo_cliente)) { // recorro el documento para saber cuantos cli
     $total_clientes++;
 }
 fclose($archivo_cliente);
+echo $total_clientes;
 $diez_porciento_cliente=$total_clientes/10;
 $contador_porciento=0;
 //-//
