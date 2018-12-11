@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0 auto;;
+            width: 70%;
+            font-family: sans-serif;
+            direction: ltr;
+            line-height: 1.5;
+            
+            text-align: justify;
+        }
+        main{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin: 40px;
+            }
+    </style>
+</head>
+
+<body>
+    <main>
+        <h2>TREN</h2>
+        <form action="tema4_tren.php" method="post">
+            <label>Código Tren <input type="date" name="fc" required></label>
+            <br>
+            <label>Código Estación <input type="number" name="recorrido" required></label>
+            <br>
+            <br>
+            <input type="submit" value="Agregar">
+        </form>
+    </main>
+</body>
+
+</html>
