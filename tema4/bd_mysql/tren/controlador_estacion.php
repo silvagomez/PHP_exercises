@@ -6,4 +6,7 @@ INSERT INTO estaciones(nombre,poblacion) VALUES('{$_REQUEST['nom_estacion']}','{
 sql;
 mysqli_query($conexion,$q) or die("ERROR: Insert");
 closeConexion($conexion);
+echo<<<html
+    Correcto <br> <a href="estacion.html">Agregar más</a>
+html;
 ?>

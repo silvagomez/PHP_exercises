@@ -14,5 +14,8 @@ mysqli_query($conexion,$q) or die("ERROR: Insert");
 // sql;
 // $conection->query($q) or die("ERROR: Insert"); // Funciona
 closeConexion($conexion);
+echo<<<html
+    Correcto <br> <a href="tren.html">Agregar más</a>
+html;
 ?>
 
