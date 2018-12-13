@@ -89,6 +89,6 @@ echoQuery($q);
 $registro=mysqli_query($conexion,$q) or die ('ERROR');
 echo "Tren modificado";
 
-closeConexion($conexion);
+mysqli_close($conexion);
 require_once '../../../estilo/formato_f.php'
 ?>

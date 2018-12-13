@@ -13,7 +13,7 @@ mysqli_query($conexion,$q) or die("ERROR: Insert");
 // INSERT INTO trenes(fecha_compra,km_recorridos) VALUES('$fc','$recorrido');
 // sql;
 // $conection->query($q) or die("ERROR: Insert"); // Funciona
-closeConexion($conexion);
+mysqli_close($conexion);
 echo<<<html
     Correcto <br> <a href="tren.html">Agregar más</a>
 html;

@@ -22,6 +22,6 @@ while ($reg=mysqli_fetch_array($registro)) {
         </p>
 html;
 }
-closeConexion($conexion);
+mysqli_close($conexion);
 require_once '../../../../estilo/formato_f.php';
 ?>

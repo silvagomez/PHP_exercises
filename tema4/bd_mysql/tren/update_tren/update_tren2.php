@@ -20,13 +20,13 @@ if (mysqli_num_rows($registro)>0) {
         </form> 
         <a href="update_tren1.php">Volver</a>
 html;
-    closeConexion($conexion);
+    mysqli_close($conexion);
 } else {
     echo <<<html
     No existe el tren $numero <br>
     <a href="update_tren1.php">Volver</a>
 html;
-    closeConexion($conexion);
+    mysqli_close($conexion);
 }
 require_once '../../../../estilo/formato_f.php';
 ?>
