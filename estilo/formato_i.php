@@ -14,7 +14,6 @@ echo <<<abc
             font-family: sans-serif;
             direction: ltr;
             line-height: 1.5;
-            
             text-align: justify;
         }
         main{
@@ -23,6 +22,9 @@ echo <<<abc
                 align-items: center;
                 margin: 40px;
             }
+        main> *{
+            flex:1 1 auto;
+        }
     </style>
 </head>
 <body>
