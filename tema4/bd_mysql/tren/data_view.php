@@ -3,15 +3,20 @@ require_once '../../../estilo/formato_i.php';
 require_once 'conexion.php';
 $conexion=getConexion();
 
+function echoQuery($query)
+{
+echo <<<html
+    <p>
+    <strong>$query</strong><br>
+    </p> 
+html;
+}
+
 //Visualizar de cada tren: numero y fecha de compra.
 $q= <<<sql
     SELECT * FROM trenes 
 sql;
-echo <<<html
-    <p>
-    <strong>$q</strong><br>
-    </p> 
-html;
+echoQuery($q);
 $registro=mysqli_query($conexion,$q) or die("ERROR");
 while ($reg=mysqli_fetch_array($registro)) {
     echo <<<html
@@ -27,11 +32,7 @@ html;
 $q= <<<sql
     SELECT * FROM estaciones WHERE poblacion='Bogotá'; 
 sql;
-echo <<<html
-    <p>
-    <strong>$q</strong><br>
-    </p> 
-html;
+echoQuery($q);
 $registro=mysqli_query($conexion,$q) or die("ERROR");
 while ($reg=mysqli_fetch_array($registro)) {
     echo <<<html
@@ -47,11 +48,7 @@ html;
 $q= <<<sql
     SELECT count(*) as total FROM estaciones WHERE poblacion='Bogotá'; 
 sql;
-echo <<<html
-    <p>
-    <strong>$q</strong><br>
-    </p> 
-html;
+echoQuery($q);
 $registro=mysqli_query($conexion,$q) or die("ERROR");
 $reg=mysqli_fetch_array($registro);
 echo <<<html
@@ -61,15 +58,10 @@ echo <<<html
 html;
 
 //Visualizar por cada recorrido nombre de la estación, numero de tren y fecha de compra del tren
-
 $q=<<<sql
     SELECT trenes.numero, trenes.fecha_compra, estaciones.nombre FROM trenes, estaciones, recorridos WHERE trenes.numero=recorridos.cod_tren AND estaciones.cod_estacion=recorridos.cod_estacion GROUP BY trenes.numero, trenes.fecha_compra, estaciones.nombre
 sql;
-echo <<<html
-    <p>
-    <strong>$q</strong><br>
-    </p> 
-html;
+echoQuery($q);
 $registro=mysqli_query($conexion,$q) or die("ERROR");
 while ($reg=mysqli_fetch_array($registro)) {
     echo <<<html
@@ -81,6 +73,21 @@ while ($reg=mysqli_fetch_array($registro)) {
 html;
 }
 
+//Eliminar de la tabla trenes, trenes cuya fecha de compra es <=al año 2000
+$q=<<<sql
+    DELETE FROM trenes WHERE fecha_compra<= '2000-1-1'
+sql;
+echoQuery($q);
+$registro=mysqli_query($conexion,$q) or die ('ERROR');
+echo "Los trenes han sido eliminados";
+
+//Modificar la fecha de compra del tren numero: 8
+$q=<<<sql
+    UPDATE trenes SET fecha_compra='2017-1-1' WHERE numero=8
+sql;
+echoQuery($q);
+$registro=mysqli_query($conexion,$q) or die ('ERROR');
+echo "Tren modificado";
 
 closeConexion($conexion);
 require_once '../../../estilo/formato_f.php'
