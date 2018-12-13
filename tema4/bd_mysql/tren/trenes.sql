@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1:3306
--- Tiempo de generación: 13-12-2018 a las 10:18:26
+-- Tiempo de generación: 13-12-2018 a las 17:37:37
 -- Versión del servidor: 5.7.21
 -- Versión de PHP: 7.2.4
 
@@ -113,7 +113,7 @@ INSERT INTO `trenes` (`numero`, `fecha_compra`, `km_recorridos`) VALUES
 (5, '2015-05-05', 100000),
 (6, '2016-06-06', 60000),
 (7, '2016-07-06', 50000),
-(8, '2016-08-06', 40000);
+(8, '2018-12-04', 40000);
 
 --
 -- Restricciones para tablas volcadas
