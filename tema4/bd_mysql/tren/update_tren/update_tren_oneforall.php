@@ -49,7 +49,8 @@ if (isset($_REQUEST['capacidad'])) {
     $q=<<<sql
     ALTER TABLE trenes add capacidad int
 sql;
-    echoQuery($q);
+echoQuery($q);
+$registro=mysqli_query($conexion,$q) or die("ERROR ALTER TABLE");
     mysqli_close($conexion);
 }
 
@@ -92,8 +93,52 @@ sql;
 }
 
 //Nombre y población de las estaciones por las que pasan más de tres trenes
+echo<<<html
+    <h2>Nombre y población de las estaciones por las que pasan más de tres trenes</h2>
+    <form action="update_tren_oneforall.php" method="post">
+        <input type="submit" value="Visualizar" name="view_trenes">
+    </form>
+html;
+if (isset($_REQUEST['view_trenes'])) {
+    $conexion=getConexion();
+    $q=<<<sql
+    SELECT estaciones.nombre, estaciones.poblacion FROM trenes, estaciones, recorridos WHERE trenes.numero=recorridos.cod_tren AND estaciones.cod_estacion=recorridos.cod_estacion HAVING COUNT(estaciones.nombre)>=3 
+sql;
+    echoQuery($q);
+    $registro=mysqli_query($conexion,$q) or die("ERROR de select");
+    while($reg=mysqli_fetch_array($registro)){
+        echo<<<html
+        <p>
+        Resultado: {$reg['nombre']} {$reg['poblacion']}
+        </p>
+html;
+    }
+    mysqli_close($conexion);
+}
 
 //Nombre y población de las estaciones que no pasan trenes
+echo<<<html
+    <h2>Nombre y población de las estaciones que no pasan trenes</h2>
+    <form action="update_tren_oneforall.php" method="post">
+        <input type="submit" value="Visualizar" name="view_esta">
+    </form>
+html;
+if (isset($_REQUEST['view_esta'])) {
+    $conexion=getConexion();
+    $q=<<<sql
+    SELECT estaciones.nombre, estaciones.poblacion from estaciones WHERE estaciones.cod_estacion NOT IN (SELECT recorridos.cod_estacion from recorridos , trenes, estaciones WHERE recorridos.cod_tren=trenes.numero AND estaciones.cod_estacion=recorridos.cod_estacion)
+sql;
+    echoQuery($q);
+    $registro=mysqli_query($conexion,$q) or die("ERROR de select");
+    while($reg=mysqli_fetch_array($registro)){
+        echo<<<html
+        <p>
+        Resultado: {$reg['nombre']} {$reg['poblacion']}
+        </p>
+html;
+    }
+    mysqli_close($conexion);
+}
 
 
 
