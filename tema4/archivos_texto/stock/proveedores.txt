@@ -1,0 +1,8 @@
+0|zara|Bogotá
+1|pull|Bogotá
+2|corte|bilbo
+3|bear|chia
+4|rabane|bilbo
+5|paco|bilbo
+8|spera|bilbo
+9|pablo|bilbo

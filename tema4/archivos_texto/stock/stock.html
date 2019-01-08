@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Pizza</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body{
+            margin: 0 auto;;
+            width: 70%;
+            font-family: sans-serif;
+            direction: ltr;
+            line-height: 1.5;
+            
+            text-align: justify;
+        }
+        main{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin: 40px;
+                width: 100%;
+            }
+            section{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                width: 100%;
+            }
+            div{
+                background-color: azure;
+                margin: 40px;
+                box-sizing: border-box;
+                padding: 10px;
+            }
+    </style>
+</head>
+
+<body>
+    <main>
+        <h1>STOCK</h1>
+        <section>
+            <div>
+                <h2>Articulos</h2>
+                <form action="articulos.php" method="POST">
+                    <label>Código articulo <input type="number" name="cod_art"></label>
+                    <br> <br>
+                    <label>Descripción <input type="text" name="desc"></label>
+                    <br> <br>
+                    <label>Existencia <input type="number" name="exist"></label>
+                    <br> <br>
+                    <label>Stock mínimo <input type="number" name="min"></label>
+                    <br> <br>
+                    <label>Código del proveedor <input type="number" name="cod_prov"></label>
+                    <br> <br>
+                    <label>Marca <input type="text" name="marca"></label>
+                    <br> <br>
+                    <input type="submit" value="Ingresar articulo" name="add_art">
+                </form>
+                <br>
+                <a href="view_articulos.php"><button>Visualizar</button></a>
+            </div>
+            <div>
+                <h2>Proveedores</h2>
+                <form action="proveedores.php" method="POST">
+                    <!-- <label>Código proveedor <input type="number" name="cod_prov"></label>
+                    <br> <br> -->
+                    <label>Nombre <input type="text" name="empresa"></label>
+                    <br> <br>
+                    <label>Población <input type="name" name="poblacion"></label>
+                    <br> <br>
+                    <input type="submit" value="Agregar proveedor" name="add_prov">
+                </form>
+                <br>
+                <a href="view_proveedores.php"><button>Visualizar</button></a>
+            </div>
+        </section>
+        <div>
+            <h3>VER INVENTARIO PARA PEDIDO</h3>
+            <a href="view_pedido.php"><button>Visualizar</button></a>
+        </div>
+    </main>
+</body>
+
+</html>
