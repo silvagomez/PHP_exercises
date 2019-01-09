@@ -15,7 +15,7 @@ else{
     $archivo=@fopen("articulos.txt","r+") or die("ERROR al abrir el archivo");
     $inicio=($codigo_articulo-1)*40; // Decimos que cada requistro tiene una longitud de 40 carácteres
     fseek($archivo,$inicio,SEEK_SET);
-    fwrite($archivo, $codigo_articulo."|".$despricion."|".$existencia."|".$stock_min."|".$codigo_proveedor."|".$marca.PHP_EOL);
+    fwrite($archivo, $codigo_articulo."|".$despricion."|".$existencia."|".$stock_min."|".$codigo_proveedor."|".$marca."|".PHP_EOL);
     fclose($archivo);
     echo <<<html
     <p>
