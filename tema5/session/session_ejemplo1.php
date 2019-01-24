@@ -1,11 +1,14 @@
 <?php
-session_start(); 
+session_start(); // crear la sesión ó iniciar
 $fechahora = "Este es el primer acceso";
 $contador = 0;
 if (isset($_SESSION['fechahora'])){
     
     $fechahora = $_SESSION['fechahora'];
-    $contador = $_SESSION['contador'];
+    if (isset($_SESSION['contador'])) {
+        # code...
+        $contador = $_SESSION['contador'];
+    }
 }
 
 date_default_timezone_set('Europe/Paris');
@@ -14,6 +17,7 @@ $_SESSION["fechahora"] = date('d/m/Y h:i:s'); // actualiza la variable
 $contador++;
 
 $_SESSION["contador"] = $contador; // actualiza la variable 
+
 ?>
 <HTML>
     <HEAD>
@@ -29,6 +33,7 @@ $_SESSION["contador"] = $contador; // actualiza la variable
     echo "Elemento contador: " . $_SESSION['contador'] . "<BR><BR>" ;
     echo "<BR>La última vez que accedi󠡠 a esta página fue : $fechahora <BR>"; 
     echo "<BR>Cantidad de accesos a esta página  : $contador <BR>"; 
+    unset($_SESSION["contador"]);
     ?> 
     </BODY>
 </HTML>
