@@ -23,7 +23,7 @@ class Empleado extends Persona{
   protected $sueldo;
   public function __construct($nombre,$edad,$sueldo)
   {
-     parent::__construct($nombre, $edad);
+     parent::__construct($nombre, $edad); // para llamar al padre
       $this->sueldo=$sueldo;
   }
  
