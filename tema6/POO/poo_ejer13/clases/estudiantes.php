@@ -17,7 +17,8 @@ class Estudiante
         while($reg =mysqli_fetch_assoc($res)){
             $this->est[]=$reg;    
         }
-        mysqli_close($con);
+        // mysqli_close($con);
+        Conectar::cerrarConexion($con);
         return $this->est;
     }  
 }
