@@ -1,15 +1,18 @@
 <?php
-//NIVEL MODELO
+//NIVEL MODELO ACCESO DATOS
+require_once 'modelo_abstraccion_bd.php';
+
 function getTodosLosEstudiantes(){
-    $conexion=mysqli_connect("localhost","root","", "daw"); 
-    $resultado = mysqli_query($conexion,'SELECT nombre, telefono FROM estudiante');
+    $con=crearConexion(); 
+    $resultado = mysqli_query($con,'SELECT nombre, telefono FROM estudiante');
     // crear el array de elementos para la capa de la vista
     $est=array();
     while ($fila = mysqli_fetch_array($resultado)){
         $est[]=$fila;
         
     }
-    mysqli_close($conexion);
+    cerrarConexion($con);
     return $est;
 }
+
 ?>
