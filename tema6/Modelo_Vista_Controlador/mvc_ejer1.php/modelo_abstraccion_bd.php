@@ -7,9 +7,12 @@ function crearConexion()
     return $conexion; 
 }
 
+function cerrarConexion($conexion)
+{
+    mysqli_close($conexion);
+}
+
 function getTodosLosEstudiantes($conexion){
-    // $con=crearConexion(); 
-    $conexion;
     $resultado = mysqli_query($conexion,'SELECT nombre, telefono FROM estudiante') or die ("ERROR query");
     // crear el array de elementos para la capa de la vista
     $est=array();
@@ -19,9 +22,18 @@ function getTodosLosEstudiantes($conexion){
     return $est;
 }
 
-function cerrarConexion($conexion)
+//También se podría dividir la función getTodosLosEstudiantes en dos, una para la select y otro para el fetch_array
+function selectEstudiantes($conexion)
 {
-    mysqli_close($conexion);
+    $resultado = mysqli_query($conexion,'SELECT nombre, telefono FROM estudiante') or die ("ERROR query");
+    return $resultado;
 }
 
+function fecthResultado($resultado)
+{
+    while ($fila = mysqli_fetch_array($resultado)){
+        $est[]=$fila;
+    }
+    return $est;
+}
 ?>

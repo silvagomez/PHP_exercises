@@ -2,8 +2,15 @@
 //NIVEL MODELO ACCESO DATOS
 require_once 'modelo_abstraccion_bd.php';
 
-$con=crearConexion();
-$est=getTodosLosEstudiantes($con);
-cerrarConexion($con);
+$conexion=crearConexion();
+
+// En una sola función
+// $est=getTodosLosEstudiantes($conexion);
+
+//En dos funciones
+$resultado=selectEstudiantes($conexion);
+$est=fecthResultado($resultado);
+
+cerrarConexion($conexion);
 
 ?>
