@@ -4,6 +4,6 @@
 <title><?php echo $titulo ?></title>
 </head>
 <body>
-<?php echo $contenido ?>
+<?php include($contenido) ?>
 </body>
 </html>

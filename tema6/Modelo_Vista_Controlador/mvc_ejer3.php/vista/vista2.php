@@ -11,6 +11,7 @@ if ($_REQUEST['radio']=="alta_estudiante") {
         <br>
         <br>
         <input type="submit" value="Insertar" name="insertar">
+        <a href="controlador.php"><input type="button" value="Volver"></a>
     </form>
 html;
 }else {
@@ -21,12 +22,12 @@ if ($_REQUEST['radio']=="consultar") {
     echo<<<html
     <form action="controlador.php" method="post">
         <h3>CONSULTAR ID ESTUDIANTE</h3>
-        <label>ID: <input type="number" name="id_estudiante" id=""></label>
+        <label>ID: <input type="number" name="id_estudiante1" id=""></label>
         <br>
         <br>
         <input type="submit" value="Consultar" name="consultar">
+        <a href="controlador.php"><input type="button" value="Volver"></a>
     </form>
-html;
 html;
 } else {
     # code...
@@ -34,6 +35,14 @@ html;
 
 if ($_REQUEST['radio']=="borrar_modificar") {
     echo<<<html
+    <form action="controlador.php" method="post">
+        <h3>BORRAR O MODIFICAR ESTUDIANTE</h3>
+        <label>ID: <input type="number" name="id_estudiante2" id=""></label>
+        <br>
+        <br>
+        <input type="submit" value="Borra - Modificar" name="borrar_modificar">
+        <a href="controlador.php"><input type="button" value="Volver"></a>
+    </form>
 html;
 } else {
     # code...
