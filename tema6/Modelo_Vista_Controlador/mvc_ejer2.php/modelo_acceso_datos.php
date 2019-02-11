@@ -1,19 +1,17 @@
 <?php
 //NIVEL MODELO ACCESO DATOS
-require_once 'modelo_abstraccion_bd.php';
-
-$conexion=crearConexion("localhost","root","", "daw");
-
-// En una sola función
-// $est=getTodosLosEstudiantes($conexion);
-
-//En dos funciones
-$query=<<<sql
-SELECT nombre, telefono FROM estudiante
+function getTodosLosEstudiantes(){
+    $conexion=crearConexion("localhost","root","", "daw");
+    $query=<<<sql
+        SELECT nombre, telefono FROM estudiante
 sql;
-$resultado=selectEstudiantes($conexion, $query);
-$est=fecthResultado($resultado);
-
-cerrarConexion($conexion);
-
+    $resultado=selectEstudiantes($conexion, $query);
+    $est=array();
+    while ($fila = fecthResultado($resultado)){
+        $est[]=$fila;
+    }
+    cerrarConexion($conexion);
+    return $est;
+    
+}
 ?>
