@@ -1,0 +1,6 @@
+camisa|1|5|19|
+camisa|2|2|19|
+falda|3|5|20|
+pantalon|4|2|25|
+pantalon|5|3|25|
+vestido|6|2|30|
